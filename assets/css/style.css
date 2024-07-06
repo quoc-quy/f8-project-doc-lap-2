@@ -47,22 +47,25 @@ a {
 }
 
 /* ====== Navbar ========= */
-.navbar {
-    background: #fff;
+.fixed {
     position: sticky;
-    top: 0;
-    z-index: 4;
+    top: -10px;
+    z-index: 1;
 }
 
-.navbar__inner {
+.header-top {
+    background: #fff;
+}
+
+.header-top__body {
     padding: 28px 0 13px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: relative;
 }
 
-.navbar__inner::after {
+.header-top__body::after {
     content: "";
     display: block;
     width: 100%;
@@ -72,7 +75,7 @@ a {
     bottom: 0;
 }
 
-.navbar__row {
+.header-top__row {
     display: flex;
     align-items: center;
     column-gap: 88px;
@@ -109,43 +112,18 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 1;
 }
 
 /* ==========Hero ============ */
+.header{
+    padding-bottom: 87px;
+}
+
 .hero {
-    height: calc(100vh - 98px);
-    position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-top: 60px;
-}
-
-.hero__vector {
-    position: absolute;
-    z-index: 2;
-}
-
-.hero__vector-flower-top {
-    left: 254px;
-    top: 35px;
-}
-
-.hero__vector-flower-bottom {
-    right: 32px;
-    bottom: 51px;
-    transform: rotate(-174.659deg);
-}
-
-.hero__vector-top {
-    left: 297px;
-    top: 27px;
-}
-
-.hero__vector-bottom {
-    transform: rotate(175.95deg);
-    right: 68px;
-    bottom: 10px;
 }
 
 .hero__content {
@@ -177,9 +155,13 @@ a {
 .hero__video-play {
     display: flex;
     align-items: center;
+    border: none;
+    padding: 0;
+    background: #fff;
+    cursor: pointer;
 }
 
-.hero__video-play-group {
+.hero__video-play-circle {
     margin-left: 36px;
     display: flex;
     align-items: center;
@@ -193,7 +175,7 @@ a {
     transition: .5s;
 }
 
-.hero__video-play:hover .hero__video-play-group{
+.hero__video-play:hover .hero__video-play-circle{
     rotate: 135deg;
     border-color: #83A17D transparent transparent  #83A17D;
 }
@@ -222,20 +204,29 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.66;
+    cursor: pointer;
 }
 
 .hero__images {
     position: relative;
     margin-right: 23px;
+}
+
+.hero__images-list {
     display: flex;
     column-gap: 20px;
 }
 
 .hero__images-blur {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
     position: absolute;
-    inset: 122px 150px 81px 156px;
+    top: 122px;
+    left: 156px;
     background: #4DBB9A;
     filter: blur(137px);
+    z-index: -1;
 }
 
 .hero__images-img {
@@ -243,9 +234,112 @@ a {
     height: 466px;
     object-fit: cover;
     border-radius: 999px;
-    z-index: 1;
 }
 
 .hero__images-img:nth-of-type(2) {
     margin-top: 77px;
+}
+
+.hero__vector {
+    position: absolute;
+}
+
+.hero__vector-flower-top {
+    transform: rotate(9.392deg);
+    left: -214px;
+    top: -25px;
+}
+
+.hero__vector-flower-bottom {
+    right: 9px;
+    bottom: -36px;
+    transform: rotate(-174.659deg);
+}
+
+.hero__vector-top {
+    left: -172px;
+    top: -32px;
+}
+
+.hero__vector-bottom {
+    transform: rotate(175.95deg);
+    right: 45px;
+    bottom: -77px;
+}
+
+/* ======== Clients ============= */
+
+.clients {
+    margin-top: 42px;
+}
+
+.clients__list {
+    height: 200px;
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+    justify-content: center;
+    background: #E2EDDF;
+    border-radius: 999px;
+}
+
+.client__item {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    border-radius: 6px;
+    color: #143C3C;
+    font-family: "Poppins";
+    transition: .3s;
+}
+
+.client__item:hover {
+    box-shadow: 6px 6px 10px 1px;
+}
+
+.client__google {
+    font-size: 3.1rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.client__slack {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.client__slack img {
+    margin-right: 5px;
+}
+
+.client__agworld {
+    color: #163C35;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.client__agworld img {
+    display: inline-block;
+    margin-right: 11px;
+}
+
+.client__riotinto {
+    font-family: "Sonsie One", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.client__heroku {
+    color: #143C3C;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.995px;
+}
+
+.client__heroku img {
+    margin-right: 14px;
 }
