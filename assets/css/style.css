@@ -10,12 +10,12 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 1.6rem;
     font-family: "Public Sans", sans-serif;
-    height: 10000px;
 }
 
 /* ========= Common ============ */
@@ -1087,4 +1087,130 @@ a {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
+}
+
+/* ============ Footer ============== */
+
+.footer {
+    margin-top: 22px;
+    padding: 72px 0 50px;
+    background: #143C3C;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__heading {
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer__more {
+    display: inline-flex;
+    margin-top: 25px;
+    padding-bottom: 26px;
+    align-items: center;
+    column-gap: 119px;
+    border-bottom: 1px solid #6A8383;
+}
+
+.footer__more-link {
+    color: #6A8383;
+    font-family: "Poppins";
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.footer__more-link:hover {
+    color: #80A07B;
+}
+
+.footer__control-btn {
+    padding: 6px 13px;
+    border: none;
+    background: transparent;
+    color: #C4C4C4;
+    cursor: pointer;
+}
+
+.footer__media {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+}
+
+.footer__media-icon {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    border: 1px solid #265252;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.footer__media-icon:hover {
+    background: #A75325;
+    border: none;
+}
+
+.footer__media-ig-wrap {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: 3px solid #fbfbfb;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__media-ig-circle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #fcfcfc;
+    border-radius: 50%;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+}
+
+.footer-column__title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.footer-column__list {
+    margin-top: 6px;
+}
+
+.footer-column__link {
+    color: #6A8383;
+    font-weight: 500;
+    line-height: 2.25;
+}
+
+.footer-column__link:hover {
+    color: #ccc;
+}
+
+.footer-line {
+    margin-top: 45px;
+    width: 1140px;
+    height: 1px;
+    background: linear-gradient(90deg, #143C3C 2.28%, #295A5A 55.65%, rgba(38, 82, 82, 0.00) 102.06%);
 }
