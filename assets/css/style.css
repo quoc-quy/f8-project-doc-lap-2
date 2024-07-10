@@ -969,3 +969,122 @@ a {
     box-shadow: 0px 36px 100px 0px rgba(111, 120, 111, 0.20);
     border: none;
 }
+
+/* ============ Blog ============== */
+
+.blog {
+    padding: 80px 0;
+    margin-top: 24px;
+}
+
+.blog__sub-title {
+    margin-left: 46px;
+}
+
+.blog__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__heading {
+    width: 520px;
+}
+
+.blog__heading::after {
+    right: -51px;
+    bottom: 18px;
+}
+
+.blog__desc {
+    width: 409px;
+    color: #7D8188;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+}
+
+.blog__list {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.blog-item {
+    border-radius: 40px 40px 20px 20px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.blog-item:hover {
+    box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
+}
+
+.blog-item:hover .blog-item__body {
+    padding-left: 30px;
+}
+
+.blog-item__wrap-img {
+    display: inline-block;
+    width: 100%;
+    height: 317px;
+    overflow: hidden;
+}
+
+.blog-item__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.blog-item:hover .blog-item__thumb {
+    transform: scale(1.1)
+}
+
+.blog-item__body {
+    padding: 26px 14px 12px 0;
+    transition: .5s;
+    height: 204px;
+}
+
+.blog-item__btn {
+    min-width: 107px;
+    background: #e2eddf;
+    color: #000;
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px;
+    transition: .5s;
+}
+
+.blog-item__btn:hover {
+    background: #143c3c;
+    color: #fff;
+}
+
+.blog-item__title {
+    display: block;
+    height: 90px;
+    margin-top: 13px;
+    color: #143C3C;
+    font-family: "Poppins";
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+}
+
+.blog-item__time {
+    margin-top: 9px;
+    padding-top: 15px;
+    border-top: 1px solid #C4C4C4;
+    text-align: right;
+    color: #575D5E;
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
